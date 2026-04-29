@@ -1,0 +1,191 @@
+[
+  {
+    "LeadID": 6202,
+    "Name": "Rocio Martinez Agency LLC",
+    "Email": "rmartinez@farmersagent.com",
+    "Website": "https://agents.farmers.com/tx/conroe/rocio-martinez",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - domain content does not align with lead identity",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6204,
+    "Name": "Rock 'N Learn, Inc.",
+    "Email": "info@rocknlearn.com",
+    "Website": "https://www.rocknlearn.com/",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6205,
+    "Name": "Rock Star Construction LLC",
+    "Email": "rockstarllc14@gmail.com",
+    "Website": "http://rockstarllc.net/",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6210,
+    "Name": "Rockwell Square Ventures LLC",
+    "Email": "michael@rockwellsquareventures.com",
+    "Website": "https://www.rockwellsquareventures.com/",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6214,
+    "Name": "Roger Brooks",
+    "Email": "Rbrookes@cleveland.texas.gov",
+    "Website": "https://www.cleveland.texas.gov",
+    "IssueType": "OFFLINE",
+    "IssueDescription": "Website offline - DNS resolution failed (getaddrinfo failed)",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6225,
+    "Name": "Rosalie Burton / National Wire LLC",
+    "Email": "info@nationalwirellc.com",
+    "Website": "http://www.nationalwirellc.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6236,
+    "Name": "Royal Equipment Inc.",
+    "Email": "info@royalequipment.com",
+    "Website": "http://www.royalequipment.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - domain-to-lead identity mismatch",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6250,
+    "Name": "Saf-T-Lite",
+    "Email": "sales@saftlite.com",
+    "Website": "http://www.saftlite.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - domain-to-lead identity mismatch",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6252,
+    "Name": "Saia Motor Freight Line LLC",
+    "Email": "smunoz@saia.com",
+    "Website": "http://www.saia.com",
+    "IssueType": "NO_CONTACT",
+    "IssueDescription": "No visible contact form/email/link found on website",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6256,
+    "Name": "Rosely's Beauty Salon",
+    "Email": "lucie.heath@theipaper.com",
+    "Website": "https://inews.co.uk/news/finally-water-firms-face-automatic-fines-illegal-sewage-3817970",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - unrelated third-party domain",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6278,
+    "Name": "Brad Rawlins",
+    "Email": "barawlins@gmail.com",
+    "Website": "https://www.har.com/brad-rawlins/agent_BARawlins",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - third-party portal dependency",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6279,
+    "Name": "Bradbury Family Investments",
+    "Email": "michael@rockwellsquareventures.com",
+    "Website": "https://www.historichillhouse.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6289,
+    "Name": "RSG Equipment Inc",
+    "Email": "info@nationalwirellc.com",
+    "Website": "http://www.nationalwirellc.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6306,
+    "Name": "Ruff Enuff Cable Leads",
+    "Email": "ruffenuff@yahoo.com",
+    "Website": "ruffenuffcableleads.com",
+    "IssueType": "DNS_FAILURE",
+    "IssueDescription": "Domain DNS lookup fails - Could not resolve host",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6313,
+    "Name": "RWC Construction Services LLC",
+    "Email": "william.edmonds@rwccold.com",
+    "Website": "https://rwccold.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - GoDaddy parked domain",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6314,
+    "Name": "Taylor Elaine Studios",
+    "Email": "publictours@taylorguitars.com",
+    "Website": "https://www.taylorguitars.com/next-generation",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6316,
+    "Name": "Huffco Services Inc.",
+    "Email": "john@gmail.com",
+    "Website": "https://beincrypto.com/crypto-airdrops-to-watch-in-2025/",
+    "IssueType": "NO_CONTACT",
+    "IssueDescription": "No visible contact form/email/link found",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6401,
+    "Name": "San Jacinto Kona Ice",
+    "Email": "jswylie@kona-ice.com",
+    "Website": "https://www.kona-ice.com/local-site/kona-ice-of-west-lake-conroenw-montgomery-county/",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6505,
+    "Name": "Sentinel Group International LLC",
+    "Email": "info@sgi-sec.com",
+    "Website": "https://www.sgi-sec.com",
+    "IssueType": "DNS_FAILURE",
+    "IssueDescription": "Website unreachable - DNS resolution failed (Could not resolve host)",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6509,
+    "Name": "Serendipitous Love LLC",
+    "Email": "serendipitouslove@outlook.com",
+    "Website": "serendipitouslove.com",
+    "IssueType": "DNS_FAILURE",
+    "IssueDescription": "Domain does not resolve - curl: (6) Could not resolve host",
+    "DiamondWorthy": true
+  },
+  {
+    "LeadID": 6517,
+    "Name": "Sign Design (Custom Sign & Graphics Haus)",
+    "Email": "info@customsignhaus.com",
+    "Website": "https://customsignhaus.com",
+    "IssueType": "PARKED",
+    "IssueDescription": "Parked/placeholder page detected - under construction",
+    "DiamondWorthy": true
+  }
+]

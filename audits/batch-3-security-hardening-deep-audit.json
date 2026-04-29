@@ -1,0 +1,80 @@
+{
+  "auditDate": "2026-03-18",
+  "auditType": "Deep Security Hardening Audit",
+  "auditor": "opencode",
+  "leads": [
+    {
+      "email": "service@jdprecisionplumbing.com",
+      "website": "jdprecisionplumbing.com",
+      "status": "diamond_issue",
+      "issueFound": "Broken contact page - /contact returns HTTP 404. Site loads successfully but users cannot access contact form through navigation.",
+      "diamondWorthy": true,
+      "evidence": {
+        "homepageStatus": "200 OK",
+        "contactPageStatus": "404 Not Found",
+        "siteQuality": "Professional, fully functional except broken contact path"
+      }
+    },
+    {
+      "email": "kerristorie@yahoo.com",
+      "website": "papillonsalondayspa.com",
+      "status": "diamond_issue",
+      "issueFound": "CRITICAL: Site displays visible template placeholder text ('Beauty Hair Stylist MP Template' repeated 40+ times in page content). Contact page also returns HTTP 404. Site appears unfinished/unprofessional - Go Daddy Website Builder template not properly configured.",
+      "diamondWorthy": true,
+      "evidence": {
+        "homepageStatus": "200 OK",
+        "contactPageStatus": "404 Not Found",
+        "siteQuality": "UNFINISHED - Template placeholder text visible to visitors",
+        "builder": "Go Daddy Website Builder 8.0.0000"
+      }
+    },
+    {
+      "email": "longac@consolidated.net",
+      "website": "longac.com",
+      "status": "live",
+      "issueFound": null,
+      "diamondWorthy": false,
+      "evidence": {
+        "homepageStatus": "200 OK",
+        "contactPageStatus": "200 OK",
+        "siteQuality": "Professional, fully functional",
+        "notes": "Contact email on site: LongAC@consolidated.net (matches provided email)"
+      }
+    },
+    {
+      "email": "customerservice@alltown.com",
+      "website": "alltown.com",
+      "status": "live",
+      "issueFound": null,
+      "diamondWorthy": false,
+      "evidence": {
+        "homepageStatus": "200 OK",
+        "contactPageStatus": "200 OK",
+        "siteQuality": "Professional, fully functional",
+        "notes": "Large convenience store chain (Alliance Energy LLC). Corporate site with working contact form."
+      }
+    },
+    {
+      "email": "mark@ourdesignerkitchen.com",
+      "website": "ourdesignerkitchen.com",
+      "status": "diamond_issue",
+      "issueFound": "Broken contact page - /contact returns HTTP 404. Site loads successfully but contact path is broken. Email contact is only option.",
+      "diamondWorthy": true,
+      "evidence": {
+        "homepageStatus": "200 OK",
+        "contactPageStatus": "404 Not Found",
+        "siteQuality": "Professional design but broken contact navigation"
+      }
+    }
+  ],
+  "summary": {
+    "totalLeads": 5,
+    "diamondIssuesFound": 3,
+    "liveSites": 2,
+    "diamondLeads": [
+      "papillonsalondayspa.com (CRITICAL - template placeholder text + broken contact)",
+      "jdprecisionplumbing.com (broken contact page)",
+      "ourdesignerkitchen.com (broken contact page)"
+    ]
+  }
+}
