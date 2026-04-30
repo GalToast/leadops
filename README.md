@@ -11,6 +11,16 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 - Scores queues so outreach work can be prioritized instead of handled as a flat list.
 - Treats wrong-entity and contact-path mistakes as first-class review problems.
 
+## Proof Artifacts
+
+| Artifact | What it shows |
+| --- | --- |
+| `app.py` | Streamlit operator dashboard entry point |
+| `leads_ui.py` | Lead review and management surface |
+| `leadops_retrieve.py` | Retrieval path across lead records and notes |
+| `audits/diamond-audit-6200-6599-2026-03-18.json` | Example structured audit output |
+| `audits/batch-3-security-hardening-deep-audit.json` | Example deep-audit result shape |
+
 ## Features
 
 **Lead Processing Pipeline**
