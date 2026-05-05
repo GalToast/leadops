@@ -45,7 +45,7 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 **Integrations**
 - SPF/DKIM signal analysis from inbox parsing
 - Automated audit scoring across 8,400+ lead records
-- Outreach sequencing with zero manual intervention
+- Outreach sequencing that produces reviewable next actions for human approval
 
 ## Usage
 
