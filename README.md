@@ -48,10 +48,14 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 - Automated audit scoring across 8,400+ lead records
 - Next-action sequencing that produces reviewable recommendations for human approval
 
+## Portfolio Boundary
+
+This is a sanitized public slice of a larger local-business operating workspace. The code is published to show the schema, retrieval, queueing, and review logic; a full local run expects private lead profiles, mailbox exports, and SQLite artifacts that are intentionally not included in this repo.
+
 ## Usage
 
 ```bash
-# Bootstrap the SQLite database
+# Bootstrap the SQLite database after wiring local source data paths
 python bootstrap_leadops_sqlite.py
 
 # Run the Streamlit UI
