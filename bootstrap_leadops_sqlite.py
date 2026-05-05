@@ -17,7 +17,7 @@ from typing import Iterable
 from urllib.parse import urlparse
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parent
 INDEX_CSV = REPO_ROOT / "leads" / "index.csv"
 MISSING_FIELDS_MD = REPO_ROOT / "leads" / "views" / "missing-fields.md"
 SEND_SUPPRESSIONS_JSON = REPO_ROOT / "notes" / "leadops-send-suppressions.json"

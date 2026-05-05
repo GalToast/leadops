@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_DB = REPO_ROOT / "crm.sqlite"
 SEMANTIC_SCRIPT = REPO_ROOT / "scripts" / "maintenance" / "semantic_search.py"
 CORPUS_QUERY_SCRIPT = REPO_ROOT / "scripts" / "maintenance" / "leadops_corpus_query.py"
@@ -102,9 +102,16 @@ def emit(payload: object, as_json: bool) -> None:
     print(safe_text)
 
 
+def connect_existing(db_path: Path) -> sqlite3.Connection:
+    if not db_path.exists():
+        raise SystemExit(f"Database not found: {db_path}")
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
 def corpus_health(db_path: Path) -> dict[str, object]:
-    with sqlite3.connect(db_path) as conn:
-        conn.row_factory = sqlite3.Row
+    with connect_existing(db_path) as conn:
         row = conn.execute(
             """
             SELECT
@@ -146,8 +153,7 @@ def select_existing(
 
 
 def lead_context(db_path: Path, lead_id: int) -> dict[str, object]:
-    with sqlite3.connect(db_path) as conn:
-        conn.row_factory = sqlite3.Row
+    with connect_existing(db_path) as conn:
         lead = select_existing(
             conn,
             "leadops_leads",
@@ -773,8 +779,7 @@ def lead_bundle(args: argparse.Namespace) -> dict[str, object]:
     docs = run_json_command(docs_cmd)
     artifacts = run_json_command(artifacts_cmd)
     semantic_results = run_json_command(semantic_cmd)
-    with sqlite3.connect(db_path) as conn:
-        conn.row_factory = sqlite3.Row
+    with connect_existing(db_path) as conn:
         fts_results = enrich_fts_results(conn, fts_results)
         audit_findings = fetch_audit_findings_summary(conn, args.lead_id)
         doc_previews = fetch_doc_previews(conn, args.lead_id, args.docs_limit)

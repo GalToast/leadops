@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.streamlit/
+.venv/
+venv/
+crm.sqlite
+crm.sqlite-*
+*.sqlite
+tmp/
+reports/

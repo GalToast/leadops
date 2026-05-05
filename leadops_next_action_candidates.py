@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_DB = REPO_ROOT / "crm.sqlite"
 DRAFTS_ROOT = REPO_ROOT / "outreach" / "drafts"
 FAMILY_EXCLUDE_IDS = {1618}

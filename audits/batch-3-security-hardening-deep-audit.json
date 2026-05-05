@@ -4,7 +4,7 @@
   "auditor": "opencode",
   "leads": [
     {
-      "email": "service@jdprecisionplumbing.com",
+      "email": "[redacted-business-email]",
       "website": "jdprecisionplumbing.com",
       "status": "diamond_issue",
       "issueFound": "Broken contact page - /contact returns HTTP 404. Site loads successfully but users cannot access contact form through navigation.",
@@ -16,7 +16,7 @@
       }
     },
     {
-      "email": "kerristorie@yahoo.com",
+      "email": "[redacted-business-email]",
       "website": "papillonsalondayspa.com",
       "status": "diamond_issue",
       "issueFound": "CRITICAL: Site displays visible template placeholder text ('Beauty Hair Stylist MP Template' repeated 40+ times in page content). Contact page also returns HTTP 404. Site appears unfinished/unprofessional - Go Daddy Website Builder template not properly configured.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "email": "longac@consolidated.net",
+      "email": "[redacted-business-email]",
       "website": "longac.com",
       "status": "live",
       "issueFound": null,
@@ -38,11 +38,11 @@
         "homepageStatus": "200 OK",
         "contactPageStatus": "200 OK",
         "siteQuality": "Professional, fully functional",
-        "notes": "Contact email on site: LongAC@consolidated.net (matches provided email)"
+        "notes": "Contact email on site matched the provided address; address redacted in this public example"
       }
     },
     {
-      "email": "customerservice@alltown.com",
+      "email": "[redacted-business-email]",
       "website": "alltown.com",
       "status": "live",
       "issueFound": null,
@@ -55,7 +55,7 @@
       }
     },
     {
-      "email": "mark@ourdesignerkitchen.com",
+      "email": "[redacted-business-email]",
       "website": "ourdesignerkitchen.com",
       "status": "diamond_issue",
       "issueFound": "Broken contact page - /contact returns HTTP 404. Site loads successfully but contact path is broken. Email contact is only option.",

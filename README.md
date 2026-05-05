@@ -19,8 +19,8 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 | `leads_ui.py` | Lead review and management surface |
 | `leadops_retrieve.py` | Retrieval path across lead records and notes |
 | `leadops_next_action_candidates.py` | Human-reviewed next-action candidate generation |
-| `audits/diamond-audit-6200-6599-2026-03-18.json` | Example structured audit output |
-| `audits/batch-3-security-hardening-deep-audit.json` | Example deep-audit result shape |
+| `audits/diamond-audit-6200-6599-2026-03-18.json` | Sanitized example structured audit output |
+| `audits/batch-3-security-hardening-deep-audit.json` | Sanitized example deep-audit result shape |
 
 ## Features
 
@@ -55,7 +55,10 @@ This is a sanitized public slice of a larger local-business operating workspace.
 ## Usage
 
 ```bash
-# Bootstrap the SQLite database after wiring local source data paths
+# Install dependencies
+python -m pip install -r requirements.txt
+
+# Bootstrap the SQLite database after wiring private lead/source data paths
 python bootstrap_leadops_sqlite.py
 
 # Run the Streamlit UI
@@ -65,9 +68,14 @@ streamlit run app.py
 streamlit run leads_ui.py
 ```
 
+## Public Data Boundary
+
+This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from your own private/source data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
+
 ## Files
 
 - `app.py` — main Streamlit multipage application
+- `core_utils.py` — shared database/vector utilities for the Streamlit pages
 - `leads_ui.py` — lead management UI
 - `leads_network.py` — graph visualization of lead relationships
 - `bootstrap_leadops_sqlite.py` — database initialization and schema setup
