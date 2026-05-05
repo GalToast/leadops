@@ -87,6 +87,10 @@ streamlit run leads_ui.py
 
 This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from private/source data. Missing database paths fail explicitly instead of creating throwaway public-clone data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
 
+## Data Provenance and Consent
+
+The public portfolio slice is designed around owned or authorized operating data: public business records, owned workspace notes, authorized mailbox exports, and sanitized audit examples. It does not include personal inbox dumps, private contact exports, customer data, or live sending credentials. Outreach queues are review surfaces for a human operator, not an unsupervised public sending system.
+
 ## Files
 
 - `app.py` — main Streamlit multipage application
