@@ -52,6 +52,21 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 
 This is a sanitized public slice of a larger local-business operating workspace. The code is published to show the schema, retrieval, queueing, and review logic; a full local run expects private lead profiles, mailbox exports, and SQLite artifacts that are intentionally not included in this repo.
 
+## Public Clone Behavior
+
+What works from this public repo:
+
+- Read the code, schema-building logic, retrieval workflows, Streamlit surfaces, and sanitized audit examples.
+- Install dependencies with `python -m pip install -r requirements.txt`.
+- Run syntax/import checks against the published source files.
+- Review the example audit JSON shape without exposing private outreach data.
+
+What intentionally does **not** run from a fresh clone:
+
+- The Streamlit UI without a private `crm.sqlite` database.
+- The full bootstrap pipeline without private lead profiles, mailbox exports, outreach logs, model files, and local source data.
+- Any direct outreach workflow. This repo is a reviewable portfolio slice, not a public sending system.
+
 ## Usage
 
 ```bash
@@ -70,7 +85,7 @@ streamlit run leads_ui.py
 
 ## Public Data Boundary
 
-This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from your own private/source data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
+This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from private/source data. Missing database paths fail explicitly instead of creating throwaway public-clone data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
 
 ## Files
 
