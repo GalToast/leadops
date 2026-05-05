@@ -89,7 +89,7 @@ This public repo contains the application code and sanitized example audit outpu
 
 ## Data Provenance and Consent
 
-The public portfolio slice is designed around owned or authorized operating data: public business records, owned workspace notes, authorized mailbox exports, and sanitized audit examples. It does not include personal inbox dumps, private contact exports, customer data, or live sending credentials. Outreach queues are review surfaces for a human operator, not an unsupervised public sending system.
+The public portfolio slice is designed around owned or authorized operating data: public business records, owned workspace notes, mailbox exports from owned McCullough Digital accounts or explicitly authorized client accounts, and sanitized audit examples. It does not include personal inbox dumps, private contact exports, customer data, or live sending credentials. Outreach queues are review surfaces for a human operator, not an unsupervised public sending system.
 
 ## Files
 
