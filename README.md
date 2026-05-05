@@ -18,6 +18,7 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 | `app.py` | Streamlit operator dashboard entry point |
 | `leads_ui.py` | Lead review and management surface |
 | `leadops_retrieve.py` | Retrieval path across lead records and notes |
+| `leadops_next_action_candidates.py` | Human-reviewed next-action candidate generation |
 | `audits/diamond-audit-6200-6599-2026-03-18.json` | Example structured audit output |
 | `audits/batch-3-security-hardening-deep-audit.json` | Example deep-audit result shape |
 
@@ -45,7 +46,7 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 **Integrations**
 - SPF/DKIM signal analysis from inbox parsing
 - Automated audit scoring across 8,400+ lead records
-- Outreach sequencing that produces reviewable next actions for human approval
+- Next-action sequencing that produces reviewable recommendations for human approval
 
 ## Usage
 
@@ -67,7 +68,7 @@ streamlit run leads_ui.py
 - `leads_network.py` — graph visualization of lead relationships
 - `bootstrap_leadops_sqlite.py` — database initialization and schema setup
 - `leadops_retrieve.py` — retrieval and search logic
-- `leadops_draft_candidates.py` — outreach draft generation
+- `leadops_next_action_candidates.py` — human-reviewed next-action candidate generation
 
 ## Recruiter Reading Guide
 
