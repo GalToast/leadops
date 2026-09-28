@@ -102,7 +102,6 @@ The public portfolio slice is designed around owned or authorized operating data
 - `bootstrap_leadops_sqlite.py` — database initialization and schema setup
 - `leadops_retrieve.py` — retrieval and search logic
 - `leadops_next_action_candidates.py` — human-reviewed next-action candidate generation
-- `pages/1_Network_View.py` — the Lead Galaxy view. It reads the private `crm.sqlite`, so on a public clone it explains the boundary instead of failing; run it where the database exists for the real thing.
 
 ## Recruiter Reading Guide
 
