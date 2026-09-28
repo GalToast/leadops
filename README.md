@@ -1,5 +1,7 @@
 # LeadOps / SMB Growth OS
 
+Developed by [Fred McCullough](https://github.com/GalToast)
+
 AI-assisted lead intelligence platform for turning fragmented business data into reviewable outreach decisions.
 
 This repo shows the data pipeline behind a local-business growth workflow: profile normalization, mailbox parsing, vector retrieval, contact-path extraction, queue generation, and Streamlit review surfaces. It is designed around traceability, not blind automation: the system helps rank and explain next actions while preserving evidence for human review.
