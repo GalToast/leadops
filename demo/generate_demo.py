@@ -10,9 +10,12 @@ What it does:
   1. Generates synthetic lead inputs under demo/work/ (index.csv, profile markdown,
      review decisions, a sample audit file). No real business data anywhere.
   2. Copies the REAL bootstrap_leadops_sqlite.py next to those inputs.
-  3. Runs the REAL pipeline to produce demo/crm.demo.sqlite (34 tables, 63 views).
+  3. Runs the REAL pipeline to produce demo/crm.demo.sqlite (41 tables, 63 views).
   4. Adds an empty leadops_vector_embeddings table so the Streamlit UI's schema
      check passes (vector search needs local embedding models; the demo skips it).
+  5. Builds the free-text search index (leadops_search_documents /
+     leadops_search_fts) from the 24 profile markdown files, since the pipeline
+     only does that under --deep-index.
 
 Then launch the UI:
 
@@ -25,6 +28,7 @@ Stdlib only. Deterministic (seeded) so every clone builds the same demo.
 from __future__ import annotations
 
 import csv
+import importlib.util
 import json
 import random
 import shutil
@@ -347,6 +351,32 @@ def run_pipeline() -> None:
         n = conn.execute(sql).fetchone()[0]
         print(f"  {label:20s} {n}")
     conn.close()
+    populate_fts()
+
+
+def populate_fts() -> None:
+    """Index the demo profile markdown files for free-text search.
+
+    The real pipeline only builds leadops_search_documents / leadops_search_fts
+    under --deep-index (needs local embedding models for the vector side).
+    The demo skips that, but the Streamlit UI's "just type to search" box only
+    reads the FTS5 table, so we run the pipeline's own search indexer here.
+    It reads the 24 profile markdown files' content from leadops_profiles and
+    inserts docs + FTS rows with the exact same schema/conventions.
+    """
+    spec = importlib.util.spec_from_file_location(
+        "demo_bootstrap", str(WORK / "bootstrap_leadops_sqlite.py")
+    )
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module.__name__] = module  # dataclasses needs the module registered
+    spec.loader.exec_module(module)
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        n = module.insert_search_documents(conn)
+        conn.commit()
+    finally:
+        conn.close()
+    print(f"\nFTS search documents indexed: {n} (from leadops_profiles.raw_markdown)")
 
 
 def main() -> None:
