@@ -76,6 +76,22 @@ NOISY_PREVIEW_PREFIXES = (
 )
 
 
+def require_private_modules() -> None:
+    """Exit with a clear human message if the private retrieval helpers are absent.
+
+    `bundle` and `workflow` shell out to scripts/maintenance/leadops_corpus_query.py
+    and scripts/maintenance/semantic_search.py, which are part of the private
+    operator setup and not included in the public repo.
+    """
+    missing = [p for p in (CORPUS_QUERY_SCRIPT, SEMANTIC_SCRIPT) if not p.exists()]
+    if missing:
+        names = ", ".join(str(p.relative_to(REPO_ROOT)) for p in missing)
+        raise SystemExit(
+            "This mode needs a private module not included in the public demo "
+            f"({names}). Other leadops_retrieve modes work on the public DB."
+        )
+
+
 def run_json_command(cmd: list[str]) -> object:
     env = os.environ.copy()
     env.setdefault("PYTHONIOENCODING", "utf-8")
@@ -719,6 +735,7 @@ def semantic_seed_query(context: dict[str, object], explicit_query: str | None) 
 
 
 def lead_bundle(args: argparse.Namespace) -> dict[str, object]:
+    require_private_modules()
     db_path = Path(args.db).resolve()
     context = lead_context(db_path, args.lead_id)
     if not context.get("lead"):
@@ -807,6 +824,7 @@ def lead_bundle(args: argparse.Namespace) -> dict[str, object]:
 
 
 def workflow_search(args: argparse.Namespace) -> dict[str, object]:
+    require_private_modules()
     workflow = WORKFLOWS[args.workflow]
     semantic_query = workflow["query"].format(query=args.query)
     semantic_cmd = [
