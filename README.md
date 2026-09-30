@@ -24,6 +24,22 @@ This repo shows the data pipeline behind a local-business growth workflow: profi
 | `audits/diamond-audit-6200-6599-2026-03-18.json` | Sanitized example structured audit output |
 | `audits/batch-3-security-hardening-deep-audit.json` | Sanitized example deep-audit result shape |
 
+## Try the demo (synthetic data, no private corpus needed)
+
+```bash
+python -m pip install -r requirements.txt
+python demo/generate_demo.py      # builds demo/crm.demo.sqlite from 24 fictional businesses
+cp demo/crm.demo.sqlite crm.sqlite
+streamlit run app.py
+```
+
+The generator writes synthetic inputs (CSV index, profile markdown, review decisions,
+contact log, sample audit) and runs the **real** `bootstrap_leadops_sqlite.py` against
+them, so the UI you get is the real workflow: send queue, research queue, human review
+decisions, audit findings, and outreach states. See `demo/README.md` for what's inside
+and a walkthrough script. Vector search is disabled in the demo (no embedding models);
+everything else works.
+
 ## Features
 
 **Lead Processing Pipeline**
@@ -58,6 +74,9 @@ This is a sanitized public slice of a larger local-business operating workspace.
 
 What works from this public repo:
 
+- **Run the synthetic demo** (see above): `python demo/generate_demo.py`, copy the
+  resulting `demo/crm.demo.sqlite` to `crm.sqlite`, and `streamlit run app.py`.
+  This is the supported way to see the UI without private data.
 - Read the code, schema-building logic, retrieval workflows, Streamlit surfaces, and sanitized audit examples.
 - Install dependencies with `python -m pip install -r requirements.txt`.
 - Run syntax/import checks against the published source files.
@@ -65,7 +84,7 @@ What works from this public repo:
 
 What intentionally does **not** run from a fresh clone:
 
-- The Streamlit UI without a private `crm.sqlite` database.
+- The Streamlit UI against the **real private corpus** without a private `crm.sqlite` database.
 - The full bootstrap pipeline without private lead profiles, mailbox exports, outreach logs, model files, and local source data.
 - Any direct outreach workflow. This repo is a reviewable portfolio slice, not a public sending system.
 
@@ -87,7 +106,7 @@ streamlit run leads_ui.py
 
 ## Public Data Boundary
 
-This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from private/source data. Missing database paths fail explicitly instead of creating throwaway public-clone data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
+This public repo contains the application code and sanitized example audit outputs, not the private CRM database, mailbox exports, outreach logs, model files, or full lead corpus. Local UI runs expect a `crm.sqlite` database generated from private/source data — or from the synthetic demo generator (`demo/generate_demo.py`), which is the supported path for anyone without the private corpus. Missing database paths fail explicitly instead of creating throwaway public-clone data. The tracked `audits/` files are included only to show the shape of reviewable evidence, with business emails redacted.
 
 ## Data Provenance and Consent
 

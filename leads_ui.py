@@ -530,10 +530,14 @@ except (sqlite3.Error, KeyError) as e:
     # Audience classification view may not exist or be malformed
     st.sidebar.caption("⚠️ Audience filters unavailable")
 
-# Link to network visualization
+# Link to network visualization (only when the multipage file exists;
+# st.page_link raises on newer Streamlit if the target page is missing)
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🕸️ Network View")
-st.sidebar.page_link("pages/1_Network_View.py", label="🌌 Open Network View", use_container_width=True)
+if Path("pages/1_Network_View.py").exists():
+    st.sidebar.page_link("pages/1_Network_View.py", label="🌌 Open Network View", use_container_width=True)
+else:
+    st.sidebar.caption("Network view page not present in this checkout.")
 
 # Maintenance
 st.sidebar.markdown("---")
