@@ -40,6 +40,11 @@ decisions, audit findings, and outreach states. See `demo/README.md` for what's 
 and a walkthrough script. Vector search is disabled in the demo (no embedding models);
 everything else works.
 
+🎬 [Watch the 2-minute demo video](docs/leadops-demo.mp4) — a narrated walkthrough
+of the live app on the synthetic demo data, following the walkthrough script in
+`demo/README.md` (queues, review decisions, the parked-domain audit nuance,
+outreach states, search).
+
 ## Features
 
 **Lead Processing Pipeline**
