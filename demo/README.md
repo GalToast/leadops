@@ -55,6 +55,6 @@ To rebuild from scratch, delete `demo/work/`, `demo/crm.demo.sqlite`, and
 2. **Why a lead is ready** — open one: contact path, enrichment, identity-match confidence.
 3. **Why a lead isn't** — a needs-research lead shows exactly what's missing.
 4. **Human in the loop** — review decisions: approved / needs_research / disqualified, with reasons.
-5. **Audits feed the queue** — 3 findings (parked domain, offline sites); one parked-domain lead is held out of sending.
+5. **Audits feed the queue** — 3 findings (parked domain, offline sites). Note the nuance: the parked-domain lead (I-45 Tire & Lube) is held out of sending **not** by the audit finding — a reviewer approved it as "real business, wrong site" — but by low entity-match confidence (37/low): the domain doesn't align with the business identity, so the send queue's confidence gate (`high`/`medium` only) keeps it out.
 6. **Outreach states** — one lead replied, one contacted; both leave the send queue automatically.
 7. **Search** — keyword search across the corpus (vector search disabled in demo).
