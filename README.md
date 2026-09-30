@@ -63,7 +63,7 @@ everything else works.
 
 **Integrations**
 - SPF/DKIM signal analysis from inbox parsing
-- Automated audit scoring across 8,400+ lead records
+- Automated audit scoring across the operating lead corpus
 - Next-action sequencing that produces reviewable recommendations for human approval
 
 ## Portfolio Boundary
