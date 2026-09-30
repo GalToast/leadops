@@ -970,8 +970,11 @@ def main():
             # Google search link
             search_query = str(lead['name']).replace('"', '')
             action_col3.link_button("🔍 Google Search", f"https://www.google.com/search?q={search_query}", use_container_width=True)
-            # Network view link
-            action_col4.page_link("pages/1_Network_View.py", label="🌌 Network View", use_container_width=True)
+            # Network view link (guarded: st.page_link raises if target page is missing)
+            if Path("pages/1_Network_View.py").exists():
+                action_col4.page_link("pages/1_Network_View.py", label="🌌 Network View", use_container_width=True)
+            else:
+                action_col4.caption("Network view not present")
 
             st.markdown("---")
 
