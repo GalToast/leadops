@@ -45,6 +45,10 @@ of the live app on the synthetic demo data, following the walkthrough script in
 `demo/README.md` (queues, review decisions, the parked-domain audit nuance,
 outreach states, search).
 
+📄 [Read the case study](docs/case-study.md) — architecture, verified demo numbers,
+methodology, and honest limitations. Built strictly from reproducible artifacts;
+production-impact sections await real data.
+
 ## Features
 
 **Lead Processing Pipeline**
